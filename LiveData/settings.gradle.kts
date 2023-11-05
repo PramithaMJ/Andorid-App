@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "VIdeoViewModel"
+rootProject.name = "LiveData"
 include(":app")

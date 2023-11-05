@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.videoviewmodel"
+    namespace = "com.example.livedata"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.videoviewmodel"
-        minSdk = 21
+        applicationId = "com.example.livedata"
+        minSdk = 24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
