@@ -1,6 +1,7 @@
 package com.example.studentregisterapp.db
 
 import androidx.lifecycle.LiveData
+import androidx.room.*
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -19,5 +20,5 @@ interface StudentDao {
     suspend fun deleteStudent(student: Student)
 
     @Query("SELECT * FROM student_data_table")
-    fun getAllStudent():LiveData<List<Student>>
+    fun getAllStudents(): LiveData<List<Student>>
 }
