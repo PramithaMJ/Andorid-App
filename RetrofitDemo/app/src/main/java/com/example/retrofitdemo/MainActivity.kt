@@ -8,8 +8,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.liveData
 import retrofit2.Response
+import com.example.retrofitdemo.databinding.ActivityMainBinding
 
-//import com.example.retrofitdemo.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -49,7 +50,6 @@ class MainActivity : AppCompatActivity() {
         val pathResponse: LiveData<Response<AlbumsItem>> = liveData {
             val response = retService.getAlbum(3)
             emit(response)
-
         }
 
         pathResponse.observe(this, Observer {
