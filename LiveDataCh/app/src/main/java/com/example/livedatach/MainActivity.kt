@@ -18,12 +18,14 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
 
+        binding.myViewModel = viewModel
+
         viewModel.count.observe(this, Observer {
             binding.textCount.text = it.toString()
         })
 
-        binding.updateCount.setOnClickListener {
-           viewModel.updateCount()
-        }
+//        binding.updateCount.setOnClickListener {
+//           viewModel.updateCount()
+//        }
     }
 }
